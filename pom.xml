@@ -72,14 +72,6 @@
     <url>http://svn.apache.org/viewvc/commons/proper/beanutils/trunk/</url>
   </scm>
 
-  <distributionManagement>
-    <site>
-      <id>apache.website</id>
-      <name>Apache Commons Beanutils Site</name>
-      <url>scm:svn:https://svn.apache.org/repos/infra/websites/production/commons/content/proper/commons-beanutils</url>
-    </site>
-  </distributionManagement>
-
   <developers>
     <developer>
       <name>Dave Brosius</name>
@@ -355,6 +347,16 @@
     </dependency>
   </dependencies>
 
+  <distributionManagement>
+	  <snapshotRepository>
+		<id>ossrh</id>
+		<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+	  </snapshotRepository>
+	  <repository>
+		<id>ossrh</id>
+		<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+	  </repository>
+  </distributionManagement>
   <build>
       <plugins>
 		<plugin>
@@ -545,11 +547,4 @@
             </plugin>
         </plugins>
     </reporting>
-
-	<distributionManagement>
-	  <snapshotRepository>
-		<id>ossrh</id>
-		<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-	  </snapshotRepository>
-	</distributionManagement>
 </project>
